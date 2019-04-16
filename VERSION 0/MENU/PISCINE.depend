@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1555344936 source:c:\users\intox\desktop\ece\info\projet piscine\projet\piscine\main.cpp
+	<iostream>
+	"menu.h"
+
+1555341455 c:\users\intox\desktop\ece\info\projet piscine\projet\piscine\menu.cpp
+	"menu.h"
+	<iostream>
+
+1555344936 c:\users\intox\desktop\ece\info\projet piscine\projet\piscine\menu.h
+
+1555348715 source:c:\users\intox\desktop\ece\info\projet piscine\projet\piscine\menu.cpp
+	<iostream>
+	"menu.h"
+
