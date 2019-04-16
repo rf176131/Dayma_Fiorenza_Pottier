@@ -10,6 +10,8 @@ int main()
     Graphe g{"triville.txt"};
 
     g.afficher();
+    g.algoKruskal();
+
 
 
     Svgfile svgout;
