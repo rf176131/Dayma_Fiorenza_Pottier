@@ -16,9 +16,9 @@ int main()
 
     //menuConsole();
 
-    g.afficher();
+//    g.afficher();
 
-//    g.dessiner(out);
+    g.dessiner(out);
 
 
     return 0;

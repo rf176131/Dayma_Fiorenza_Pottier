@@ -20,11 +20,11 @@ Sommet::Sommet(std::string id, std::vector <const Sommet*> voisins)
 /**
 Méthode d'ajout d'un voisin
 ---------------------------------------------------------------------------------------------
-**/
+**//*
 void Sommet::ajouterVoisin(const Sommet* voisin)
 {
     m_voisins.push_back(voisin);
-}
+}*/
 
 
 /**
@@ -39,14 +39,14 @@ void Sommet::afficherData() const
 /**
 Méthode d'affichage des données d'un voisin
 ---------------------------------------------------------------------------------------------
-**/
+**//*
 void Sommet::afficherVoisins() const
 {
     std::cout<<"  voisins :"<<std::endl;
     for(auto v:m_voisins) {
         v->afficherData();
     }
-}
+}*/
 
 /**
 Accesseur sur l'abscisse du sommet
@@ -82,7 +82,20 @@ Méthode permettant de dessiner un sommet
 **/
 void Sommet::dessinerSommet(Svgfile &out)
 {
+
     m_couleur.modifier(135, 206, 235);
     out.addDisk(m_x, m_y, 20, m_couleur);
+    out.addText(m_x, m_y, m_id,out.makeRGB(238, 53, 13));
 }
+
+
+/**
+Accesseur de l'identifiant d'un sommet
+---------------------------------------------------------------------------------------------
+**/
+int Sommet::getm_id()
+{
+    return m_id;
+}
+
 

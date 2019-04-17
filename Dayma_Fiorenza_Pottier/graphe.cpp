@@ -58,8 +58,9 @@ Graphe::Graphe(std::string nomFichier)
 /**
 Affichage du graphe
 ----------------------------------------------------------------------------------------------------------------------------------------
-**/
-void Graphe::afficher() const{
+**//*
+void Graphe::afficher() const
+{
     std::cout <<"Graphe : \n "<<std::endl;
 ///    std::cout << "Ordre du graphe : " << m_sommets.size() << "\n" <<std::endl ;
 
@@ -72,7 +73,7 @@ void Graphe::afficher() const{
     }
 
 
-}
+}*/
 
 
 /**
@@ -118,8 +119,13 @@ Chargement des fichiers avec deux poids
 **/
 Graphe::Graphe(std::string nomFichier1,std::string nomFichier2)
 {
+
     std::ifstream ifs{nomFichier1};
     std::ifstream ifs2{nomFichier2};
+
+   // std::vector <int> collectionAnnexe;
+   //int x1, x2, y1, y2;             ///
+
     int rep,p;
     ifs2>>rep;
     ifs2>>p;
@@ -148,7 +154,7 @@ Graphe::Graphe(std::string nomFichier1,std::string nomFichier2)
     int id_voisin;
     int id_voisin2;
     float poid1,poid2;
-    int h,S1,S2;
+    int h;
 
     //lecture des aretes
     for (int i=0; i<taille; ++i)
@@ -161,10 +167,18 @@ Graphe::Graphe(std::string nomFichier1,std::string nomFichier2)
         ifs2>>h;
         ifs2>>poid1;
         ifs2>>poid2;
+     //   x1 = collectionAnnexe[(3*id_voisin2) + 1];                  ///
+       // x2 = collectionAnnexe[(3*id) + 1];                          ///
+        //y1 = collectionAnnexe[(3*id_voisin2) + 1];                  ///
+        //y2 = collectionAnnexe[(3*id) + 1];                          ///
         m_CollectionAretes.push_back(new Aretes(poid1,poid2,id,id_voisin));
-/*
-        (m_CollectionSommets.find(id))->second->ajouterVoisin((m_CollectionSommets.find(id_voisin))->second);
-        (m_CollectionSommets.find(id_voisin))->second->ajouterVoisin((m_CollectionSommets.find(id))->second);*/
+
+        //collectionAnnexe.push_back( new Aretes{poid1,poid2,x1, y1, x2, y2});             ///
+
+
+        //Aretes(float poids1, float poids2, Sommet *s1, Sommet *s2);
+        //m_CollectionAretes.push_
+
     }
 }
 
@@ -178,6 +192,7 @@ void Graphe::afficher2() const
 {
     for (size_t i=0; i<m_CollectionAretes.size(); i++)
     {
+
         m_CollectionAretes[i]->afficher2();
     }
 }
@@ -187,42 +202,30 @@ void Graphe::afficher2() const
 /**
 Affichage du graphe danq un fichier SVG
 ----------------------------------------------------------------------------------------------------------------------------------------
-**//*
+**/
 void Graphe::dessiner(Svgfile &out)
 {
-    Sommet *s;           //pointeur sur sommet
-    Aretes *a;           //Pointeur sur Aretes
 
-    //out.addCircle(45,340,60,(250,145,123));
-
-    std::unordered_map <std::string, Sommet*>::iterator it = m_CollectionSommets.begin();
-
-    while(it != m_CollectionSommets.end())
+    for(size_t i = 0 ; i < m_CollectionAretes.size() ; ++i)                //parcours du vecteur de sommets
     {
-        std::string accesseurID = it->first;
+        int id1, id2;           //variables intermédiares
+        id1 = m_CollectionAretes[i]->getm_id1();                    //on récupère les coordonnées du premier sommet
+        id2 = m_CollectionAretes[i]->getm_id2();                    //on récupère les coordonnées du second sommet
+        out.addLine(m_CollectionSommets[id1]->getCoordX(), m_CollectionSommets[id1]->getCoordY(),  m_CollectionSommets[id2]->getCoordX(),  m_CollectionSommets[id2]->getCoordY(), out.makeRGB(0,0,0));          //affichage de la ligne
+    }
 
+    for(size_t i = 0 ; i < m_CollectionSommets.size() ; ++i)                //parcours du vecteur de sommets
+    {
+        m_CollectionSommets[i]->dessinerSommet(out);                //on dessine les sommets
 
     }
 
-
-    for(auto &i : m_CollectionSommets)
-    {
-        //s = m_CollectionSommets.find(i)->second;
-        s->dessinerSommet(out);
-    }
-
-    for(size_t i = 0 ; i < m_CollectionAretes.size() ; ++i)
-    {
-        m_CollectionAretes[i]->dessinerAretes(out);
-
-    }
+}
 
 
-    for(const auto &it : m_CollectionSommets)         //on parcourt les sommets
-    {
-        a = it.second->dessinerSommet;            //on attribut à degreSommet la valeur renvoyée par getDegre
-    }
-}*/
+
+
+
 
 
 
