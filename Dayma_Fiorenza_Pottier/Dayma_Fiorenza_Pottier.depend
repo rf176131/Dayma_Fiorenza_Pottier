@@ -1,0 +1,102 @@
+# depslib dependency file v1.0
+1555492641 source:c:\users\rémi fiorenza\documents\projetpiscine\dayma_fiorenza_pottier\aretes.cpp
+	"aretes.h"
+
+1555492626 source:c:\users\rémi fiorenza\documents\projetpiscine\dayma_fiorenza_pottier\graphe.cpp
+	"graphe.h"
+	"svgfile.h"
+
+1555492773 source:c:\users\rémi fiorenza\documents\projetpiscine\dayma_fiorenza_pottier\main.cpp
+	<iostream>
+	<fstream>
+	"menu.h"
+	"graphe.h"
+	"svgfile.h"
+
+1555491798 source:c:\users\rémi fiorenza\documents\projetpiscine\dayma_fiorenza_pottier\sommet.cpp
+	"sommet.h"
+
+1555492780 source:c:\users\rémi fiorenza\documents\projetpiscine\dayma_fiorenza_pottier\menu.cpp
+	"menu.h"
+	"console.h"
+	<stdlib.h>
+
+1555427834 c:\users\rémi fiorenza\documents\projetpiscine\dayma_fiorenza_pottier\menu.h
+	<iostream>
+	"svgfile.h"
+	"graphe.h"
+
+1555492673 c:\users\rémi fiorenza\documents\projetpiscine\dayma_fiorenza_pottier\aretes.h
+	"sommet.h"
+	<iostream>
+
+1555490799 c:\users\rémi fiorenza\documents\projetpiscine\dayma_fiorenza_pottier\sommet.h
+	"svgfile.h"
+	<vector>
+	<iostream>
+	"couleur.h"
+
+1555490660 c:\users\rémi fiorenza\documents\projetpiscine\dayma_fiorenza_pottier\graphe.h
+	<iostream>
+	<vector>
+	<fstream>
+	<algorithm>
+	<iterator>
+	"svgfile.h"
+	"aretes.h"
+	"sommet.h"
+	<unordered_map>
+	"couleur.h"
+
+1555353721 source:c:\users\rémi fiorenza\documents\projetpiscine\dayma_fiorenza_pottier\svgfile.cpp
+	"svgfile.h"
+	<iostream>
+	<sstream>
+	<stdexcept>
+
+1555353721 c:\users\rémi fiorenza\documents\projetpiscine\dayma_fiorenza_pottier\svgfile.h
+	<string>
+	<fstream>
+	<set>
+
+1555439548 source:c:\users\rémi fiorenza\documents\projetpiscine\dayma_fiorenza_pottier\console.cpp
+	"console.h"
+	<conio.h>
+	<windows.h>
+
+1555354181 c:\users\rémi fiorenza\documents\projetpiscine\dayma_fiorenza_pottier\console.h
+	<iostream>
+	"console.h"
+
+1555426600 source:c:\users\rémi fiorenza\documents\projetpiscine\dayma_fiorenza_pottier\couleur.cpp
+	"couleur.h"
+	"svgfile.h"
+	"util.h"
+	<iostream>
+
+1555406351 c:\users\rémi fiorenza\documents\projetpiscine\dayma_fiorenza_pottier\couleur.h
+	<string>
+	<cstdint>
+
+1555406651 c:\users\rémi fiorenza\documents\projetpiscine\dayma_fiorenza_pottier\util.h
+	<string>
+	<random>
+	<ctime>
+	<iostream>
+
+1555406493 source:c:\users\rémi fiorenza\documents\projetpiscine\dayma_fiorenza_pottier\util.cpp
+	"util.h"
+	<random>
+	<ctime>
+	<iostream>
+	<streambuf>
+	<vector>
+	<cstdlib>
+	<cstdio>
+	<algorithm>
+	<cstring>
+	<iostream>
+	<thread>
+	"util.h"
+	<windows.h>
+
