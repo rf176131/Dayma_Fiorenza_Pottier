@@ -7,7 +7,7 @@ int main()
 {
     //menuConsole();
 
-    Graphe g{"/Users/Work-ING/Desktop/Project#9/Project#9/triville.txt","/Users/Work-ING/Desktop/Project#9/Project#9/triville_weights_1.txt"};
+    Graphe g{"/Users/Work-ING/Desktop/ale/exec/triville.txt","/Users/Work-ING/Desktop/ale/exec/triville_weights_1.txt"};
 
     g.afficher2();
 
