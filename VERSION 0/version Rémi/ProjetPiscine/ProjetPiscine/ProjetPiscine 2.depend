@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1555334637 source:c:\users\rémi fiorenza\documents\projetpiscine\projetpiscine\main.cpp
+	<iostream>
+	<vector>
+	"graphe.h"
+
+1555334464 source:c:\users\rémi fiorenza\documents\projetpiscine\projetpiscine\graphe.cpp
+	"graphe.h"
+
+1555335010 c:\users\rémi fiorenza\documents\projetpiscine\projetpiscine\graphe.h
+	<iostream>
+	<vector>
+	<algorithm>
+	<iterator>
+	"aretes.h"
+	"sommet.h"
+
+1555338464 c:\users\rémi fiorenza\documents\projetpiscine\projetpiscine\aretes.h
+	<iostream>
+	"sommet.h"
+
+1555332920 c:\users\rémi fiorenza\documents\projetpiscine\projetpiscine\sommet.h
+	<iostream>
+
+1555338436 source:c:\users\rémi fiorenza\documents\projetpiscine\projetpiscine\aretes.cpp
+	"aretes.h"
+
